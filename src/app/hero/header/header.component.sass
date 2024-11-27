@@ -1,0 +1,91 @@
+@import ../../../styles
+
+*
+    font-family: 'Fira Code', sans-serif
+
+header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 32px 16px
+
+    img
+        height: 48px
+        &:hover
+            cursor: pointer
+
+    @media screen and ( min-width: 480px )
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%)
+
+#respLogo
+    @media screen and ( min-width: 480px )
+        display: none
+        
+.language_switch
+    display: none
+    font-size: 16px
+    font-weight: 400
+    border: 1px solid $turquoise
+    border-radius: 100px
+    height: 28px
+
+    @media screen and ( min-width: 480px )
+        display: flex
+
+    &:hover
+        cursor: pointer
+        border-color: white
+        >p
+            color: $turquoise
+        .active_switch
+            color: white
+
+    >p
+        padding: 12px
+        border-radius: 100px
+        color:#3DCFB680
+        @include centerFlex()
+
+    .active_switch
+        background: $turquoise
+        color: white
+        font-weight: 700
+
+a
+    text-decoration: none
+    color: white
+
+#burgerButton
+    width: 48px
+    height: 48px
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    padding: 8px
+
+    @media screen and ( min-width: 480px )
+        display: none
+    
+    .burger_line
+        width: 100%
+        height: 2px
+        background: white
+        border-radius: 8px
+
+    &:hover
+        cursor: pointer
+        .burger_line
+            background: $turquoise
+    
+    &:active
+        .burger_line
+            background: $turquoise
+
+#burgerMenu
+    display: none
+
+nav
+    display: none
+    @media screen and ( min-width: 480px )
+        display: flex
+        
