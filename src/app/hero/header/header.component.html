@@ -1,15 +1,16 @@
 <header>
-    <img id="respLogo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()" alt="Logo">
+    <img id="respLogo" [src]="currentRespLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
+        alt="Logo">
 
-    <div class="language_switch">
-        <p>EN</p>
-        <p class="active_switch">DE</p>
+    <div class="menu">
+        <div class="language_switch">
+            <p>EN</p>
+            <p class="active_switch">DE</p>
+        </div>
+            <a href="#about-me">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
     </div>
-    <nav>
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-    </nav>
 
     <div id="burgerButton">
         <div class="burger_line"></div>
@@ -26,4 +27,6 @@
             <p class="active_switch">DE</p>
         </div>
     </div>
+
+    <img id="logo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()" alt="Logo">
 </header>

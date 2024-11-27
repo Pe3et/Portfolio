@@ -8,6 +8,7 @@ header
     align-items: center
     justify-content: space-between
     padding: 32px 16px
+    height: 50px
 
     img
         height: 48px
@@ -16,11 +17,30 @@ header
 
     @media screen and ( min-width: 480px )
         background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%)
+        padding: 0 32px
+        height: 96px
+
+    @media screen and ( min-width: 768px )
+        padding: 0 96px
+
+.menu
+    display: flex
+    align-items: center
+    gap: 24px
+    display: none
+
+    @media screen and ( min-width: 480px )
+        display: flex
 
 #respLogo
     @media screen and ( min-width: 480px )
         display: none
-        
+
+#logo
+    display: none
+    @media screen and ( min-width: 480px )
+        display: block
+
 .language_switch
     display: none
     font-size: 16px
@@ -43,7 +63,7 @@ header
     >p
         padding: 12px
         border-radius: 100px
-        color:#3DCFB680
+        color: #3DCFB680
         @include centerFlex()
 
     .active_switch
@@ -65,7 +85,7 @@ a
 
     @media screen and ( min-width: 480px )
         display: none
-    
+
     .burger_line
         width: 100%
         height: 2px
@@ -76,7 +96,7 @@ a
         cursor: pointer
         .burger_line
             background: $turquoise
-    
+
     &:active
         .burger_line
             background: $turquoise
@@ -85,7 +105,3 @@ a
     display: none
 
 nav
-    display: none
-    @media screen and ( min-width: 480px )
-        display: flex
-        
