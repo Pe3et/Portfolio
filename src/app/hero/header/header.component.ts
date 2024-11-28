@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.sass'
 })
@@ -13,7 +14,7 @@ export class HeaderComponent {
   logoHover = new Image()
   currentRespLogo: HTMLImageElement = this.respLogoFull
   currentLogo: HTMLImageElement = this.logoFull
-
+  overlayVisibility: boolean = false
 
   constructor() {
     this.respLogoFull.src = 'assets/img/logo.png'
@@ -30,5 +31,13 @@ export class HeaderComponent {
   logoFullChange() {
     this.currentRespLogo = this.respLogoFull
     this.currentLogo = this.logoFull
+  }
+
+  toggleOverlay() {
+    this.overlayVisibility = !this.overlayVisibility
+  }
+
+  propagationStop(event: Event) {
+    event.stopPropagation()
   }
 }

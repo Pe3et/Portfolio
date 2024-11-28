@@ -7,25 +7,27 @@
             <p>EN</p>
             <p class="active_switch">DE</p>
         </div>
-            <a href="#about-me">About me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-    </div>
-
-    <div id="burgerButton">
-        <div class="burger_line"></div>
-        <div class="burger_line"></div>
-        <div class="burger_line"></div>
-    </div>
-
-    <div id="burgerMenu">
         <a href="#about-me">About me</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <div class="language_switch">
-            <p>EN</p>
-            <p class="active_switch">DE</p>
-        </div>
+    </div>
+
+    <div id="burgerButton" (click)="toggleOverlay()">
+        <div class="burger_line" [ngClass]="{'turquoise_background': overlayVisibility}"></div>
+        <div class="burger_line" [ngClass]="{'turquoise_background': overlayVisibility}"></div>
+        <div class="burger_line" [ngClass]="{'turquoise_background': overlayVisibility}"></div>
+    </div>
+
+    <div id="burgerMenu" [ngStyle]="{display: overlayVisibility ? 'flex' : 'none'}" (click)="toggleOverlay()">
+        <nav (click)="propagationStop($event)">
+            <a href="#about-me">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <div class="resp_language_switch">
+                <p>EN</p>
+                <p class="active_switch">DE</p>
+            </div>
+        </nav>
     </div>
 
     <img id="logo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()" alt="Logo">
