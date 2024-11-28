@@ -46,4 +46,8 @@ export class HeaderComponent {
     this.language = this.language == "DE" ? "EN" : "DE"
     // TODO: implement language switch
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

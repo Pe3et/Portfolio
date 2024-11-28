@@ -1,6 +1,6 @@
 <header>
     <img id="respLogo" [src]="currentRespLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
-        alt="Logo">
+        (click)="scrollToTop()" alt="Logo">
 
     <div class="menu">
         <div class="language_switch" (click)="switchLanguage()">
@@ -20,9 +20,9 @@
 
     <div id="burgerMenu" [ngStyle]="{display: overlayVisibility ? 'flex' : 'none'}" (click)="toggleOverlay()">
         <nav (click)="propagationStop($event)">
-            <a href="#about-me">About me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="#about-me" (click)="toggleOverlay()">About me</a>
+            <a href="#skills" (click)="toggleOverlay()">Skills</a>
+            <a href="#projects" (click)="toggleOverlay()">Projects</a>
             <div class="resp_language_switch" (click)="switchLanguage()">
                 <p [ngClass]="{'active_switch': language == 'EN'}">EN</p>
                 <p [ngClass]="{'active_switch': language == 'DE'}">DE</p>
@@ -30,5 +30,6 @@
         </nav>
     </div>
 
-    <img id="logo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()" alt="Logo">
+    <img id="logo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
+        (click)="scrollToTop()" alt="Logo">
 </header>
