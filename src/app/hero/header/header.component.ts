@@ -15,6 +15,7 @@ export class HeaderComponent {
   currentRespLogo: HTMLImageElement = this.respLogoFull
   currentLogo: HTMLImageElement = this.logoFull
   overlayVisibility: boolean = false
+  language: "DE" | "EN" = "DE"
 
   constructor() {
     this.respLogoFull.src = 'assets/img/logo.png'
@@ -39,5 +40,10 @@ export class HeaderComponent {
 
   propagationStop(event: Event) {
     event.stopPropagation()
+  }
+
+  switchLanguage() {
+    this.language = this.language == "DE" ? "EN" : "DE"
+    // TODO: implement language switch
   }
 }
