@@ -2,4 +2,14 @@
     display: flex
     justify-content: center
     align-items: center
-    
+
+@mixin decorationDot()
+    position: relative
+    &::after
+        content: '\00B7'
+        color: $turquoise
+        position: absolute
+        top: 5px
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 30px
