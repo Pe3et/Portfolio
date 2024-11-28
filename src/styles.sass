@@ -1,25 +1,41 @@
-@import app/shared/variables
-@import app/shared/mixins
+@use "app/shared/variables" as *
+@use "app/shared/mixins" as *
 
 *
-    margin: 0
-    scroll-behavior: smooth
-    box-sizing: border-box
-    transition: 75ms ease-in-out
+  margin: 0
+  scroll-behavior: smooth
+  box-sizing: border-box
+  transition: 75ms ease-in-out
 
 /* karla-regular - latin */
-@font-face 
+@font-face
   font-display: swap
   font-family: 'Karla'
   font-style: normal
   font-weight: 400
   src: url('../public/assets/fonts/karla-v31-latin-regular.woff2') format('woff2')
 
-
 /* fira-code-regular - latin */
-@font-face 
+@font-face
   font-display: swap
   font-family: 'Fira Code'
   font-style: normal
   font-weight: 400
   src: url('../public/assets/fonts/fira-code-v22-latin-regular.woff2') format('woff2')
+
+.button
+  color: white
+  padding: 16px 24px
+  border-radius: 100px
+  border: 1px solid white
+  font-family: 'Karla', sans-serif
+  font-size: 18px
+
+  &:hover
+    color: $turquoise
+    border-color: $turquoise
+    cursor: pointer
+
+  &:active
+    color: $turquoise
+    border-color: $turquoise

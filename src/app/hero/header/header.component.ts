@@ -15,7 +15,7 @@ export class HeaderComponent {
   currentRespLogo: HTMLImageElement = this.respLogoFull
   currentLogo: HTMLImageElement = this.logoFull
   overlayVisibility: boolean = false
-  language: "DE" | "EN" = "DE"
+  language: "DE" | "EN" = "EN"
 
   constructor() {
     this.respLogoFull.src = 'assets/img/logo.png'
