@@ -50,9 +50,43 @@ main
     80%
         left: 0
 
-    
-
-
 .lateral_area
     display: flex
     justify-content: space-between
+    width: 100%
+
+    .animation_arrow
+        width: 30px
+        height: 48px
+        border-radius: 32px
+        border: 1px solid $turquoise
+        @include centerFlex()
+
+        .arrow
+            animation: left_lateral_animation 3s ease infinite
+            position: relative
+            border: 1px solid white
+            height: 14px
+            border-radius: 1px
+            &::before, &::after
+                content: ''
+                position: absolute
+                bottom: 1px
+                width: 5px
+                border: 1px solid white
+                border-radius: 1px
+            &::before
+                left: -6px
+                transform: rotate(45deg)
+            &::after
+                left: -1px
+                transform: rotate(-45deg)
+
+@keyframes left_lateral_animation
+    0%
+        transform: translateY(-2px)
+    50%
+        transform: translateY(10px)
+    100%
+        transform: translateY(-2px)
+        
