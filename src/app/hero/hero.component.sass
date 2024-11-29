@@ -12,6 +12,7 @@ main
     align-items: center
     text-align: center
     padding: 333px 16px 0 16px
+    height: 100%
 
     h2
         font-family: 'Fira Code', sans-serif
@@ -54,33 +55,50 @@ main
     display: flex
     justify-content: space-between
     width: 100%
+    flex: 1
+    padding-top: 48px
 
-    .animation_arrow
-        width: 30px
-        height: 48px
-        border-radius: 32px
-        border: 1px solid $turquoise
-        @include centerFlex()
+    @media screen and ( min-width: 555px )
+        padding-top: 0
 
-        .arrow
-            animation: left_lateral_animation 3s ease infinite
-            position: relative
-            border: 1px solid white
-            height: 14px
-            border-radius: 1px
-            &::before, &::after
-                content: ''
-                position: absolute
-                bottom: 1px
-                width: 5px
+    .left_lateral
+        display: flex
+        flex-direction: column
+        height: 100%
+        align-items: center
+        gap: 24px
+
+        .animation_arrow
+            width: 30px
+            height: 48px
+            border-radius: 32px
+            border: 1px solid $turquoise
+            @include centerFlex()
+
+            .arrow
+                animation: left_lateral_animation 3s ease infinite
+                position: relative
                 border: 1px solid white
+                height: 14px
                 border-radius: 1px
-            &::before
-                left: -6px
-                transform: rotate(45deg)
-            &::after
-                left: -1px
-                transform: rotate(-45deg)
+                &::before, &::after
+                    content: ''
+                    position: absolute
+                    bottom: 1px
+                    width: 5px
+                    border: 1px solid white
+                    border-radius: 1px
+                &::before
+                    left: -6px
+                    transform: rotate(45deg)
+                &::after
+                    left: -1px
+                    transform: rotate(-45deg)
+
+        .vertical_line
+            width: 1px
+            background: $turquoise
+            flex: 1
 
 @keyframes left_lateral_animation
     0%
