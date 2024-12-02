@@ -61,12 +61,15 @@ main
     @media screen and ( min-width: 555px )
         padding-top: 0
 
-    .left_lateral
+    .lateral
         display: flex
         flex-direction: column
         height: 100%
         align-items: center
         gap: 24px
+
+    .left_lateral
+        @extend .lateral
 
         .animation_arrow
             width: 30px
@@ -100,11 +103,28 @@ main
 
     .vertical_line
         width: 1px
-        background: $turquoise
         flex: 1
 
     .right_lateral
-        //TODO:
+        @extend .lateral
+
+        .socials
+            @include centerFlex()
+            flex-direction: column
+            gap: 24px
+            padding-top: 50px
+
+            a:hover svg
+                path
+                    fill: white
+
+        .vertical_line
+            background: white
+
+    .marquee
+        position: absolute
+        bottom: 50px
+        .marquee_content
 
 @keyframes left_lateral_animation
     0%
