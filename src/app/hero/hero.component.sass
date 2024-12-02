@@ -79,7 +79,7 @@ main
                 animation: left_lateral_animation 3s ease infinite
                 position: relative
                 border: 1px solid white
-                height: 14px
+                height: 16px
                 border-radius: 1px
                 &::before, &::after
                     content: ''
@@ -96,9 +96,15 @@ main
                     transform: rotate(-45deg)
 
         .vertical_line
-            width: 1px
             background: $turquoise
-            flex: 1
+
+    .vertical_line
+        width: 1px
+        background: $turquoise
+        flex: 1
+
+    .right_lateral
+        //TODO:
 
 @keyframes left_lateral_animation
     0%
@@ -107,4 +113,3 @@ main
         transform: translateY(10px)
     100%
         transform: translateY(-2px)
-        

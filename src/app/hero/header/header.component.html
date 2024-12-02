@@ -4,10 +4,10 @@
 
     <div class="menu">
         <div class="language_switch" (click)="switchLanguage()">
-            <p [ngClass]="{'active_switch': language == 'EN'}">EN</p>
-            <p [ngClass]="{'active_switch': language == 'DE'}">DE</p>
+            <p [ngClass]="{'active_switch': textContent.language == 'EN'}">EN</p>
+            <p [ngClass]="{'active_switch': textContent.language == 'DE'}">DE</p>
         </div>
-        <a href="#about-me">About me</a>
+        <a href="#about-me">{{textContent.text["nav1"][textContent.language]}}</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
     </div>
@@ -24,8 +24,8 @@
             <a href="#skills" (click)="toggleOverlay()">Skills</a>
             <a href="#projects" (click)="toggleOverlay()">Projects</a>
             <div class="resp_language_switch" (click)="switchLanguage()">
-                <p [ngClass]="{'active_switch': language == 'EN'}">EN</p>
-                <p [ngClass]="{'active_switch': language == 'DE'}">DE</p>
+                <p [ngClass]="{'active_switch': textContent.language == 'EN'}">EN</p>
+                <p [ngClass]="{'active_switch': textContent.language == 'DE'}">DE</p>
             </div>
         </nav>
     </div>

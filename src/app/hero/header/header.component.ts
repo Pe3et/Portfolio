@@ -1,5 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, inject } from '@angular/core'
 import { CommonModule } from '@angular/common';
+import { TextContentService } from '../../shared/text-content/text-content.service';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,7 @@ export class HeaderComponent {
   currentRespLogo: HTMLImageElement = this.respLogoFull
   currentLogo: HTMLImageElement = this.logoFull
   overlayVisibility: boolean = false
-  language: "DE" | "EN" = "EN"
+  textContent = inject(TextContentService)
 
   constructor() {
     this.respLogoFull.src = 'assets/img/logo.png'
@@ -43,8 +44,7 @@ export class HeaderComponent {
   }
 
   switchLanguage() {
-    this.language = this.language == "DE" ? "EN" : "DE"
-    // TODO: implement language switch
+    this.textContent.language = this.textContent.language == "DE" ? "EN" : "DE"
   }
 
   scrollToTop() {
