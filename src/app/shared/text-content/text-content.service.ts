@@ -21,11 +21,11 @@ export class TextContentService {
       },
       heroButton1: {
         EN: "Check my work",
-        DE: "Meine Arbeit ansehen"
+        DE: "Arbeit ansehen"
       },
       heroButton2: {
         EN: "Contact me",
-        DE: "Kontaktiere mich"
+        DE: "Schreib mir"
       }
     }
 
