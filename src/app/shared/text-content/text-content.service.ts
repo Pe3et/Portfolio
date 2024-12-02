@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TextContentService {
-  language: "DE" | "EN" = "EN"
+  language: "DE" | "EN";
   text: { [key: string]: { EN: string, DE: string } } =
     {
       nav1: {
@@ -18,8 +18,36 @@ export class TextContentService {
       nav3: {
         EN: "Projects",
         DE: "Projekte"
+      },
+      heroButton1: {
+        EN: "Check my work",
+        DE: "Meine Arbeit ansehen"
+      },
+      heroButton2: {
+        EN: "Contact me",
+        DE: "Kontaktiere mich"
       }
     }
 
-  constructor() { }
+  constructor() {
+    this.language = this.getLanguageFromLocalStorage()
+  }
+
+  getText(key: string) {
+    return this.text[key][this.language]
+  }
+
+  switchLanguage() {
+    this.language = this.language === "EN" ? "DE" : "EN";
+    localStorage.setItem("language", this.language)
+  }
+
+  getLanguageFromLocalStorage() {
+    let storageLang = localStorage.getItem("language");
+    if (storageLang === "DE") {
+      return "DE"
+    } else {
+      return "EN"
+    }
+  }
 }

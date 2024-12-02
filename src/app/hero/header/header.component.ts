@@ -16,7 +16,7 @@ export class HeaderComponent {
   currentRespLogo: HTMLImageElement = this.respLogoFull
   currentLogo: HTMLImageElement = this.logoFull
   overlayVisibility: boolean = false
-  textContent = inject(TextContentService)
+  text = inject(TextContentService)
 
   constructor() {
     this.respLogoFull.src = 'assets/img/logo.png'
@@ -44,7 +44,7 @@ export class HeaderComponent {
   }
 
   switchLanguage() {
-    this.textContent.language = this.textContent.language == "DE" ? "EN" : "DE"
+    this.text.language = this.text.language == "DE" ? "EN" : "DE"
   }
 
   scrollToTop() {
