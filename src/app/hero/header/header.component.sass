@@ -80,12 +80,16 @@ header
 
 a
     text-decoration: none
+    font-size: 18px
     color: white
     &:hover
         @include decorationDot()
     &:active
         color: $turquoise
         @include decorationDot()
+    @media screen and ( min-width: 630px )
+        font-size: 20px
+        
 
 #burgerButton
     width: 48px
