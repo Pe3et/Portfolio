@@ -15,6 +15,8 @@ main
     padding: 333px 16px 0 16px
     @media screen and ( min-width: 630px )
         padding: 316px 32px 0 32px
+    @media screen and ( min-width: 1024px )
+        padding: 316px 96px 0 96px
 
     h2
         font-family: 'Fira Code', sans-serif
@@ -22,7 +24,7 @@ main
         font-weight: 400
         @media screen and ( min-width: 630px )
             font-size: 32px
-        @media screen and ( min-width: 768px )
+        @media screen and ( min-width: 1024px )
             font-size: 40px
 
     h1
@@ -31,7 +33,7 @@ main
         font-weight: 700
         @media screen and ( min-width: 630px )
             font-size: 96px
-        @media screen and ( min-width: 768px )
+        @media screen and ( min-width: 1024px )
             font-size: 128px
 
 .buttons
@@ -40,7 +42,7 @@ main
     margin-top: 24px
     @media screen and ( max-width: 395px )
         flex-direction: column
-    @media screen and ( min-width: 630px )
+    @media screen and ( min-width: 1024px )
         gap: 48px
 
 .button
@@ -69,7 +71,7 @@ main
     flex: 1
     padding-top: 48px
 
-    @media screen and ( min-width: 555px )
+    @media screen and ( min-width: 630px )
         padding-top: 0
 
     .lateral
@@ -126,25 +128,30 @@ main
             padding-top: 50px
             width: 32px
 
-            a:hover svg
-                path
-                    fill: white
-
             #heroMail
-                p
-                    display: none
-                    font-size: 18px
-
-            @media screen and ( min-width: 555px)
-                #heroMail
-                    margin-bottom: 100px
+                display: none
+                font-size: 18px
+                @media screen and ( min-width: 1024px)
+                    margin-bottom: 80px
                     transform: rotate(-90deg)
+                    display: flex
+                    &:hover
+                        color: $turquoise
+
+            a:not(#heroMail):hover
+                @include decorationDot('right')
+                svg
+                    path
+                        fill: white
+
+            @media screen and ( min-width: 1024px)
+                #heroMailIcon
                     svg
                         display: none
-                    p
-                        display: flex
-                        &:hover
-                            color: $turquoise
+                padding-top: 0
+                transform: scaleY(1)
+                margin-top: -110px
+
 
         .vertical_line
             background: white

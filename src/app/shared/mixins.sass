@@ -9,9 +9,12 @@
         content: '\00B7'
         color: #6AD7BF
         position: absolute
-        // @if $position == 'bottom'
-        top: 5px
-        left: 50%
-        transform: translateX(-50%)
         font-size: 50px
-             
+        @if $position == 'bottom'
+            top: -5px
+            left: 50%
+            transform: translateX(-50%)
+        @else if $position == 'right'
+            top: 50%
+            right: -12px
+            transform: translateY(-60%)
