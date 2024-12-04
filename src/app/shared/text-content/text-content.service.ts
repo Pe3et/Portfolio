@@ -28,16 +28,16 @@ export class TextContentService {
         DE: "Schreib mir"
       },
       marquee1: {
-        EN: "Remote",
-        DE: "Remote"
+        EN: "Frontend Developer",
+        DE: "Frontend Developer"
       },
       marquee2: {
         EN: "Open to work",
         DE: "Offen für Arbeit"
       },
       marquee3: {
-        EN: "Frontend Developer",
-        DE: "Frontend Developer"
+        EN: "Remote",
+        DE: "Remote"
       }
     }
 

@@ -142,7 +142,6 @@ main
                     height: 30px
                     transform: rotate(-90deg)
                     display: flex
-
                     &:hover
                         color: $turquoise
 
@@ -164,10 +163,10 @@ main
         position: absolute
         left: calc(var(--outer_padding) * -1 - 3px)
         bottom: 15%
-        padding: 12px 32px
+        padding: 12px 0
         background: #FFFFFF1F
         backdrop-filter: blur(5.300000190734863px)
-        width: 1440px
+        width: 1445px
         transform: rotate(-3deg)
         overflow: hidden
 
@@ -177,7 +176,10 @@ main
             gap: 56px
             font-family: 'Karla', sans-serif
             color: $turquoise
-            animation: marquee_scroll 5s linear infinite
+            @media screen and ( max-width: 1023px )
+                animation: marquee_scroll 12s linear infinite
+            @media screen and ( min-width: 1024px )
+                animation: marquee_scroll_desktop 20s linear infinite
 
             p
                 font-size: 24px
@@ -202,7 +204,12 @@ main
 
 @keyframes marquee_scroll
     0%
-        transform: translateX(0)
+        left: 0
     100%
-        transform: translateX(-69%)
-        
+        transform: translateX(-802px)
+
+@keyframes marquee_scroll_desktop
+    0%
+        left: 0
+    100%
+        transform: translateX(-949px)
