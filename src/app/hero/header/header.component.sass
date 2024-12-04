@@ -4,27 +4,34 @@
     font-family: 'Fira Code', sans-serif
 
 header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    @media screen and ( min-width: 630px )
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%)
+
+.header_content
     display: flex
     align-items: center
     justify-content: space-between
     padding: 32px 16px
     height: 50px
-    position: fixed
-    top: 0
     width: 100%
-
-    img
-        height: 48px
-        &:hover
-            cursor: pointer
-
+    max-width: 1440px
     @media screen and ( min-width: 630px )
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%)
         padding: 0 32px
         height: 96px
 
     @media screen and ( min-width: 768px )
         padding: 0 96px
+
+    img
+        height: 48px
+        &:hover
+            cursor: pointer
 
 .menu
     display: flex
@@ -89,7 +96,6 @@ a
         @include decorationDot()
     @media screen and ( min-width: 630px )
         font-size: 20px
-        
 
 #burgerButton
     width: 48px
@@ -114,9 +120,9 @@ a
             background: $turquoise
 
 .turquoise_background
-            background: $turquoise !important
+    background: $turquoise !important
 
-#burgerMenu    
+#burgerMenu
     height: 100vh
     width: 100%
     position: absolute
@@ -139,4 +145,3 @@ a
 
         >a
             font-size: 18px
-

@@ -1,35 +1,37 @@
 <header>
-    <img id="respLogo" [src]="currentRespLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
-        (click)="scrollToTop()" alt="Logo">
+    <div class="header_content">
+        <img id="respLogo" [src]="currentRespLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
+            (click)="scrollToTop()" alt="Logo">
 
-    <div class="menu">
-        <div class="language_switch" (click)="text.switchLanguage()">
-            <p [ngClass]="{'active_switch': text.language == 'EN'}">EN</p>
-            <p [ngClass]="{'active_switch': text.language == 'DE'}">DE</p>
-        </div>
-        <a href="#about-me">{{text.getText("nav1")}}</a>
-        <a href="#skills">{{text.getText("nav2")}}</a>
-        <a href="#projects">{{text.getText("nav3")}}</a>
-    </div>
-
-    <div id="burgerButton" (click)="toggleOverlay()">
-        <div class="burger_line" [ngClass]="{'turquoise_background': overlayVisibility}"></div>
-        <div class="burger_line" [ngClass]="{'turquoise_background': overlayVisibility}"></div>
-        <div class="burger_line" [ngClass]="{'turquoise_background': overlayVisibility}"></div>
-    </div>
-
-    <div id="burgerMenu" [ngStyle]="{display: overlayVisibility ? 'flex' : 'none'}" (click)="toggleOverlay()">
-        <nav (click)="propagationStop($event)">
-            <a href="#about-me" (click)="toggleOverlay()">{{text.getText("nav1")}}</a>
-            <a href="#skills" (click)="toggleOverlay()">{{text.getText("nav2")}}</a>
-            <a href="#projects" (click)="toggleOverlay()">{{text.getText("nav3")}}</a>
-            <div class="resp_language_switch" (click)="text.switchLanguage()">
+        <div class="menu">
+            <div class="language_switch" (click)="text.switchLanguage()">
                 <p [ngClass]="{'active_switch': text.language == 'EN'}">EN</p>
                 <p [ngClass]="{'active_switch': text.language == 'DE'}">DE</p>
             </div>
-        </nav>
-    </div>
+            <a href="#about-me">{{text.getText("nav1")}}</a>
+            <a href="#skills">{{text.getText("nav2")}}</a>
+            <a href="#projects">{{text.getText("nav3")}}</a>
+        </div>
 
-    <img id="logo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
-        (click)="scrollToTop()" alt="Logo">
+        <div id="burgerButton" (click)="toggleOverlay()">
+            <div class="burger_line" [ngClass]="{'turquoise_background': overlayVisibility}"></div>
+            <div class="burger_line" [ngClass]="{'turquoise_background': overlayVisibility}"></div>
+            <div class="burger_line" [ngClass]="{'turquoise_background': overlayVisibility}"></div>
+        </div>
+
+        <div id="burgerMenu" [ngStyle]="{display: overlayVisibility ? 'flex' : 'none'}" (click)="toggleOverlay()">
+            <nav (click)="propagationStop($event)">
+                <a href="#about-me" (click)="toggleOverlay()">{{text.getText("nav1")}}</a>
+                <a href="#skills" (click)="toggleOverlay()">{{text.getText("nav2")}}</a>
+                <a href="#projects" (click)="toggleOverlay()">{{text.getText("nav3")}}</a>
+                <div class="resp_language_switch" (click)="text.switchLanguage()">
+                    <p [ngClass]="{'active_switch': text.language == 'EN'}">EN</p>
+                    <p [ngClass]="{'active_switch': text.language == 'DE'}">DE</p>
+                </div>
+            </nav>
+        </div>
+
+        <img id="logo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
+            (click)="scrollToTop()" alt="Logo">
+    </div>
 </header>

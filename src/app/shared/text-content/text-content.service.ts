@@ -26,6 +26,18 @@ export class TextContentService {
       heroButton2: {
         EN: "Contact me",
         DE: "Schreib mir"
+      },
+      marquee1: {
+        EN: "Remote",
+        DE: "Remote"
+      },
+      marquee2: {
+        EN: "Open to work",
+        DE: "Offen für Arbeit"
+      },
+      marquee3: {
+        EN: "Frontend Developer",
+        DE: "Frontend Developer"
       }
     }
 
