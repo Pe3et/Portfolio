@@ -18,7 +18,7 @@ main
     height: 100%
     width: 100%
     max-width: 1440px
-    padding: 333px var(--outer_padding) 0 var(--outer_padding)
+    padding: 30vh var(--outer_padding) 0 var(--outer_padding)
 
     h2
         font-family: 'Fira Code', sans-serif
@@ -163,12 +163,13 @@ main
     .marquee
         position: absolute
         left: calc(var(--outer_padding) * -1 - 3px)
-        bottom: 50px
+        bottom: 15%
         padding: 12px 32px
         background: #FFFFFF1F
         backdrop-filter: blur(5.300000190734863px)
         width: 1440px
         transform: rotate(-3deg)
+        overflow: hidden
 
         .marquee_content
             display: flex
@@ -176,7 +177,7 @@ main
             gap: 56px
             font-family: 'Karla', sans-serif
             color: $turquoise
-            animation: marquee_scroll 3s linear infinite
+            animation: marquee_scroll 5s linear infinite
 
             p
                 font-size: 24px
@@ -203,5 +204,5 @@ main
     0%
         transform: translateX(0)
     100%
-        transform: translateX(-800px)
+        transform: translateX(-69%)
         
