@@ -18,11 +18,7 @@ main
     height: 100%
     width: 100%
     max-width: 1440px
-    padding: 333px 16px 0 16px
-    @media screen and ( min-width: 630px )
-        padding: 316px 32px 0 32px
-    @media screen and ( min-width: 1024px )
-        padding: 316px 96px 0 96px
+    padding: 333px var(--outer_padding) 0 var(--outer_padding)
 
     h2
         font-family: 'Fira Code', sans-serif
@@ -76,6 +72,7 @@ main
     width: 100%
     flex: 1
     padding-top: 48px
+    position: relative
 
     @media screen and ( min-width: 630px )
         padding-top: 0
@@ -165,13 +162,14 @@ main
 
     .marquee
         position: absolute
-        left: 50px
+        left: calc(var(--outer_padding) * -1 - 3px)
         bottom: 50px
         padding: 12px 32px
         background: #FFFFFF1F
         backdrop-filter: blur(5.300000190734863px)
-        width: 1480px
+        width: 1440px
         transform: rotate(-3deg)
+
         .marquee_content
             display: flex
             align-items: center
@@ -179,6 +177,7 @@ main
             font-family: 'Karla', sans-serif
             color: $turquoise
             animation: marquee_scroll 3s linear infinite
+
             p
                 font-size: 24px
                 min-width: fit-content
