@@ -25,3 +25,70 @@ section
         #hoverImg
             left: -12px
             top: 12px
+
+p
+    font-family: 'Karla', sans-serif
+
+#aboutmeContainer
+    display: flex
+    flex-direction: column
+    margin-top: 40px
+    gap: 16px
+    @media screen and ( min-width: 1024px )
+        gap: 20px
+
+    p
+        color: $turquoise
+        font-weight: 700
+        font-size: 18px
+        @media screen and ( min-width: 1024px )
+            font-size: 24px
+            font-weight: 500
+
+#aboutmeCard
+    display: flex
+    flex-direction: column
+    background: rgba(61, 207, 182, 0.2)
+    border: 1px solid #3DCFB6
+    border-radius: 30px
+    padding: 27px 32px
+    gap: 32px
+    @media screen and ( min-width: 1024px )
+        padding: 32px
+        gap: 40px
+
+    h1
+        color: $turquoise
+        font-family: 'Fira Code', sans-serif
+        font-weight: 700
+        letter-spacing: -0.03em
+        font-size: 56px
+        @media screen and ( min-width: 1024px )
+            font-size: 64px
+
+    p
+        color: white
+        font-weight: 400
+        font-size: 16px
+        @media screen and ( min-width: 1024px )
+            font-size: 18px
+
+    #iconsAndText
+        display: flex
+        flex-direction: column
+        gap: 16px
+
+        .iconAndTextRow
+            display: flex
+            gap: 24px
+            align-items: start
+            justify-content: start
+
+            p
+                color: rgba(255, 255, 255, 0.8)
+                &:hover
+                    color: white
+
+            img
+                width: 32px
+                height: 32px
