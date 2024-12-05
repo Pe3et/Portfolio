@@ -4,6 +4,17 @@ section
     background: black
     width: 100%
     padding: 96px var(--outer_padding)
+    display: flex
+    justify-content: center
+
+main
+    max-width: 1440px
+    display: flex
+    flex-direction: column
+    gap: 40px
+    justify-content: center
+    @media screen and ( min-width: 1024px )
+        flex-direction: row
 
 #pictureContainer
     position: relative
@@ -12,6 +23,10 @@ section
         width: 100%
         border-radius: 30px
         z-index: 1
+        @media screen and ( min-width: 1024px )
+            min-width: 50%
+            height: max-content
+            padding-bottom: 98px
 
     #hoverImg
         position: absolute
@@ -32,10 +47,11 @@ p
 #aboutmeContainer
     display: flex
     flex-direction: column
-    margin-top: 40px
     gap: 16px
     @media screen and ( min-width: 1024px )
         gap: 20px
+        max-width: 50%
+        padding-top: 98px
 
     p
         color: $turquoise
