@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TextContentService } from '../shared/text-content/text-content.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.sass'
 })
 export class PortfolioComponent {
-
+  text = inject(TextContentService)
 }
