@@ -1,1 +1,45 @@
 @use '../shared' as *
+
+section
+    background: black
+    padding: 0px var(--outer_padding) 96px
+    display: flex
+    flex-direction: column
+    gap: 16px
+    @media screen and ( min-width: 1024px )
+        gap: 20px
+
+h2
+    font-family: 'Karla', sans-serif
+    color: $turquoise
+    font-size: 18px
+    font-weight: 700
+
+#skillsetContainer
+    @extend .cardContainer
+    align-items: start
+
+    h1
+        font-family: 'Fira Code', sans-serif
+        font-size: 56px
+        color: $turquoise
+        letter-spacing: -0.03em
+
+    p
+        font-family: 'Karla', sans-serif
+        color: white
+
+    #needAnotherSkill
+        display: flex
+        gap: 12px
+
+        span
+            color: white
+            font-family: 'Fira Code', sans-serif
+            font-size: 20px
+            font-weight: 700
+            &:nth-child(2)
+                color: $turquoise    
+
+
+                
