@@ -65,6 +65,34 @@ export class TextContentService {
         DE: `Programmieren ist mehr als nur das Lösen von Computerproblemen; es ist eine universelle Sprache der Logik.
           Ich sehe Code als eine Linse, durch die wir komplexe Systeme verstehen können
           und bin leidenschaftlich daran interessiert, Programmieren als Werkzeug zur Problemlösung einzusetzen. Haben Sie eine Herausforderung für mich?`
+      },
+      technologies: {
+        EN: "Technologies",
+        DE: "Technologieen"
+      },
+      skillsetHeading: {
+        EN: "Skill Set",
+        DE: "Skill Set"
+      },
+      skillset1: {
+        EN: "Recently, I have focused on various projects in frontend development and currently plan to further educate myself in the backend area.",
+        DE: "Ich habe mich in jüngster Zeit mit diversen Projekten auf die Frontend Entwicklung fokussiert und habe aktuell vor, mich im Backend Bereich weiterzubilden."
+      },
+      skillset2a: {
+        EN: "You need",
+        DE: "Sie brauchen"
+      },
+      skillset2b: {
+        EN: "another skill?",
+        DE: "einen weiteren Skill?"
+      },
+      skillset3: {
+        EN: "Feel free to contact me. I'm looking to expand my skills.",
+        DE: "Kontaktieren Sie mich gern. Ich möchte meine Fähigkeiten erweitern."
+      },
+      letsTalkButton: {
+        EN: "Let's Talk",
+        DE: "Lassen Sie uns reden"
       }
     }
 
