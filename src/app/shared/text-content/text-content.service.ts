@@ -48,8 +48,8 @@ export class TextContentService {
         DE: "Über mich"
       },
       aboutme: {
-        EN: "Hello, I am a developer with an analytical mindset and a solution-oriented approach. I am currently continuously advancing my programming skills and am always striving to acquire new knowledge and expand my competencies.",
-        DE: "Hallo, ich bin ein Entwickler mit analytischem Denken und Lösungsorientierung. Aktuell entwickle ich meine Programmierfähigkeiten kontinuierlich weiter und bin stets bestrebt, neues Wissen zu erwerben und meine Kompetenzen auszubauen."
+        EN: "Hello, I'm a solution-oriented developer who approaches problems with a combination of analytical and intuitive thinking. I am currently continuously advancing my programming skills and am always striving to acquire new knowledge and expand my competencies.",
+        DE: "Hallo, ich bin ein lösungsorientierter Entwickler, der Probleme mit einer Kombination aus analytischem und intuitivem Denken angeht. Aktuell entwickle ich meine Programmierfähigkeiten kontinuierlich weiter und bin stets bestrebt, neues Wissen zu erwerben und meine Kompetenzen auszubauen."
       },
       aboutmeLocation: {
         EN: "I've been working remotely in recent years and really enjoy having the flexibility to create my ideal workspace and the possibility to control sensory inputs.",
