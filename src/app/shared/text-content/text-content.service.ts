@@ -97,7 +97,11 @@ export class TextContentService {
       hoverBubble: {
         EN: "I am interested in these frameworks, for example:",
         DE: "Ich habe zum Beispiel Interesse an diesen Frameworks:"
-      }
+      },
+      featuredProjects: {
+        EN: "Featured Projects",
+        DE: "Ausgewählte Projekte"
+      },
     }
 
   constructor() {
