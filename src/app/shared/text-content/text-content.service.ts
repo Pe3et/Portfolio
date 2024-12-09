@@ -83,8 +83,8 @@ export class TextContentService {
         DE: "Sie brauchen"
       },
       skillset2b: {
-        EN: "another skill?",
-        DE: "einen weiteren Skill?"
+        EN: "more skills?",
+        DE: "mehr Skills?"
       },
       skillset3: {
         EN: "Feel free to contact me. I'm looking to expand my skills.",
@@ -95,8 +95,8 @@ export class TextContentService {
         DE: "Lassen Sie uns reden"
       },
       hoverBubble: {
-        EN: "I have interest in learning, for example:",
-        DE: "Ich habe Interesse, zum Beispiel dies zu lernen:"
+        EN: "I am interested in these frameworks, for example:",
+        DE: "Ich habe zum Beispiel Interesse an diesen Frameworks:"
       }
     }
 
