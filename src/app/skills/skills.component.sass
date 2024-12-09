@@ -1,12 +1,21 @@
 @use '../shared' as *
 
-section
+main
     background: black
     padding: 0px var(--outer_padding) 96px
     display: flex
     flex-direction: column
-    gap: 16px
     background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgba(8, 70, 59) 0%, #000000 100%)
+    gap: 40px
+    @media screen and ( min-width: 1024px )
+        gap: 20px
+        flex-direction: row
+        align-items: center
+
+#skillsText
+    display: flex
+    flex-direction: column
+    gap: 16px
     @media screen and ( min-width: 1024px )
         gap: 20px
 
@@ -33,6 +42,8 @@ h2
     #needAnotherSkill
         display: flex
         gap: 12px
+        @media screen and ( max-width: 391px )
+            flex-direction: column
 
         span
             color: white
@@ -42,5 +53,27 @@ h2
             &:nth-child(2)
                 color: $turquoise    
 
+#skillsIcons
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    gap: 32px
+    height: fit-content
 
-                
+    .skill
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        gap: 8px
+        width: 104px
+        color: white
+        font-family: 'Fira Code', sans-serif
+        font-size: 16px
+        &:hover
+            img
+                scale: 1.1
+        
+    #growthMindset:hover
+        cursor: pointer
