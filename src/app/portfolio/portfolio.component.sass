@@ -1,9 +1,43 @@
 @use '../shared' as *
 
 main
-
+    padding: 0px var(--outer_padding) 96px
+    display: flex
+    flex-direction: column
+    color: white
+    @media screen and ( min-width: 1024px )
 
 h1, h2
     color: $turquoise
 
-        
+h1
+    margin: 16px 0 32px
+    @media screen and ( min-width: 1024px )
+        margin: 20px 0 41px
+
+p, span
+    font-family: 'Karla', sans-serif
+
+p
+    font-size: 16px
+    @media screen and ( min-width: 1024px )
+        font-size: 18px
+
+span
+    font-size: 18px
+
+b
+    font-family: 'Fira Code', sans-serif
+    font-size: 24px
+    font-weight: 700
+
+.projectsContainer
+    display: flex
+    flex-direction: column
+
+    .spacer
+        height: 1px
+        background: $turquoise
+
+    .singleProject
+        padding: 32px

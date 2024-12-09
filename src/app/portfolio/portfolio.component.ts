@@ -9,4 +9,11 @@ import { TextContentService } from '../shared/text-content/text-content.service'
 })
 export class PortfolioComponent {
   text = inject(TextContentService)
+  projects: {title: string, skills: string[], description: string} [] = [
+    {
+      title: 'Join',
+      skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
+      description: 'todo'
+    }
+  ]
 }

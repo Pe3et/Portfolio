@@ -1,4 +1,17 @@
 <main>
     <h2>Portfolio</h2>
-    <h1>{{text.getText("featuredProjects")}}</h1>
+    <h1>{{text.getText("featuredProjectsHeading")}}</h1>
+    <p>{{text.getText("featuredProjectsText")}}</p>
+    <div class="projectsContainer">
+        <div class="spacer"></div>
+        @for (project of projects; track $index) {
+            <div class="singleProject">
+                <b>{{project.title}}</b>
+                <div class="projectSkills">
+                    <!-- for-loop for the skills with spacer (use span, because they start 18px font-size) -->
+                </div>
+            </div>
+            <div class="spacer"></div>
+        }
+    </div>
 </main>

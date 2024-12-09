@@ -98,10 +98,14 @@ export class TextContentService {
         EN: "I am interested in these frameworks, for example:",
         DE: "Ich habe zum Beispiel Interesse an diesen Frameworks:"
       },
-      featuredProjects: {
+      featuredProjectsHeading: {
         EN: "Featured Projects",
         DE: "Ausgewählte Projekte"
       },
+      featuredProjectsText: {
+        EN: "Practical examples of my work - Interactive insights into my projects.",
+        DE: "Praxisbeispiele meiner Arbeit - Interaktive Einblicke in meine Projekte."
+      }
     }
 
   constructor() {
