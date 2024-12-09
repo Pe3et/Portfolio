@@ -93,6 +93,10 @@ export class TextContentService {
       letsTalkButton: {
         EN: "Let's Talk",
         DE: "Lassen Sie uns reden"
+      },
+      hoverBubble: {
+        EN: "I have interest in learning, for example:",
+        DE: "Ich habe Interesse, zum Beispiel dies zu lernen:"
       }
     }
 

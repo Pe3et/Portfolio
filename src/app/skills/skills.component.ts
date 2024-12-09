@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { TextContentService } from '../shared/text-content/text-content.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.sass'
 })

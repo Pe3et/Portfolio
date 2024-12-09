@@ -13,10 +13,23 @@
         </div>
     </section>
     <div id="skillsIcons">
-        @for (skill of skills; track $index) {
-            <div class="skill">
+        @for (skill of skills; track $index; let last = $last) {
+            <div [ngClass]="last ? 'skill growthMindset' : 'skill'">
                 <img src="{{skill.src}}" alt="{{skill.name}}">
                 <p>{{skill.name}}</p>
+                <div *ngIf="last" class="hover_bubble">
+                    <p>{{text.getText("hoverBubble")}}</p>
+                    <div class="interestSkillsContainer">
+                        <div class="skill">
+                            <img src="./assets/img/frontend_icons/react.svg" alt="React">
+                            <p>React</p>
+                        </div>
+                        <div class="skill">
+                            <img src="./assets/img/frontend_icons/vue_js.svg" alt="Vue.js">
+                            <p>Vue.js</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         }
     </div>
