@@ -105,6 +105,14 @@ export class TextContentService {
       featuredProjectsText: {
         EN: "Practical examples of my work - Interactive insights into my projects.",
         DE: "Praxisbeispiele meiner Arbeit - Interaktive Einblicke in meine Projekte."
+      },
+      legalNotice: {
+        EN: "Legal Notice",
+        DE: "Impressum"
+      },
+      privacyPolicy: {
+        EN: "Privacy Policy",
+        DE: "Datenschutz"
       }
     }
 
