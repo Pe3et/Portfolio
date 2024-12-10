@@ -2,13 +2,16 @@
     <h2>Portfolio</h2>
     <h1>{{text.getText("featuredProjectsHeading")}}</h1>
     <p>{{text.getText("featuredProjectsText")}}</p>
-    <div class="projectsContainer">
+    <div class="projects_container">
         <div class="spacer"></div>
         @for (project of projects; track $index) {
-            <div class="singleProject">
+            <div class="single_project">
                 <b>{{project.title}}</b>
-                <div class="projectSkills">
-                    <!-- for-loop for the skills with spacer (use span, because they start 18px font-size) -->
+                <div class="project_skills">
+                    @for (skill of project.skills; track $index; let last = $last) {
+                        <span>{{skill}}</span>
+                        <div *ngIf="!last" class="skill_spacer"></div>
+                    }
                 </div>
             </div>
             <div class="spacer"></div>
