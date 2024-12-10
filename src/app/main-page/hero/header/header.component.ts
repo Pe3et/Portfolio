@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core'
 import { CommonModule } from '@angular/common';
-import { TextContentService } from '../../shared/text-content/text-content.service';
+import { TextContentService } from './../../../shared/text-content/text-content.service';
 
 @Component({
   selector: 'app-header',

@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { TextContentService } from '../shared/text-content/text-content.service';
+import { TextContentService } from './../../shared/text-content/text-content.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.sass'
 })

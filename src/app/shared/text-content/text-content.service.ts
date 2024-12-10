@@ -113,6 +113,10 @@ export class TextContentService {
       privacyPolicy: {
         EN: "Privacy Policy",
         DE: "Datenschutz"
+      },
+      greifswald: {
+        EN: "Greifswald Germany",
+        DE: "Greifswald"
       }
     }
 
