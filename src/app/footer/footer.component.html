@@ -1,1 +1,16 @@
-<p>footer works!</p>
+<footer>
+    <div class="side">
+        <img id="logo" [src]="currentLogo.src" (mouseenter)="logoHoverChange()" (mouseleave)="logoFullChange()"
+            (click)="scrollToTop()" alt="Logo">
+        <p>Web Developer</p>
+        <p>Greifswald Germany</p>
+    </div>
+    <div class="side">
+        <a href="">GitHub</a>
+        <a href="">LinkedIn</a>
+        <a href="">Email</a>
+        <a href=""></a>
+        <a href=""></a>
+    </div>
+    <span>© Peter Wolf 2024</span>
+</footer>
