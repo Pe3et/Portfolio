@@ -10,15 +10,17 @@ import { CommonModule } from '@angular/common';
 })
 export class PortfolioComponent {
   text = inject(TextContentService)
-  projects: {title: string, skills: string[], description: string} [] = [
+  projects: {title: string, skills: string[], previewSrc: string , description: string} [] = [
     {
       title: 'Join',
       skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
+      previewSrc: '',
       description: 'todo'
     },
     {
-      title: 'DA - Demon Assault',
+      title: 'Demon Assault',
       skills: ['JavaScript', 'HTML', 'CSS'],
+      previewSrc: './assets/img/demon_assault_preview.png',
       description: 'todo'
     }
   ]
