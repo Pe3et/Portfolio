@@ -117,6 +117,14 @@ export class TextContentService {
       greifswald: {
         EN: "Greifswald Germany",
         DE: "Greifswald"
+      },
+      contact: {
+        EN: "Contact",
+        DE: "Kontakt"
+      },
+      phone: {
+        EN: "Phone",
+        DE: "Telefon"
       }
     }
 
