@@ -33,6 +33,11 @@ b
     font-family: 'Fira Code', sans-serif
     font-size: 24px
     font-weight: 700
+    display: flex
+    align-items: center
+    svg
+        margin-left: 8px
+        opacity: 0
 
 .projects_container
     display: flex
@@ -53,7 +58,12 @@ b
             flex-direction: row
             justify-content: space-between
             align-items: center
-            
+        &:hover
+            background: #3DCFB64D
+            cursor: pointer
+            svg
+                opacity: 1
+
         .project_skills
             display: flex
             gap: 8px
