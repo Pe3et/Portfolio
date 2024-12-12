@@ -26,7 +26,7 @@ export class PortfolioComponent {
       previewSrc: './assets/img/demon_assault_preview.png',
       description: {
         EN: `Challenging Jump 'n' Run game based on object-oriented programming. Collect droppables and shoot lightnings.`,
-        DE: `Anspruchsvolles Jump 'n' Run-Spiel basierend auf objektorientierter Programmierung. Sammle fallengelassene Items und schieße Blitze.`
+        DE: `Herausforderndes Jump 'n' Run-Spiel basierend auf objektorientierter Programmierung. Sammle fallengelassene Items und schieße Blitze.`
       }
     }
   ]
