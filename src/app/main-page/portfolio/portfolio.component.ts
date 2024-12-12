@@ -10,18 +10,24 @@ import { CommonModule } from '@angular/common';
 })
 export class PortfolioComponent {
   text = inject(TextContentService)
-  projects: {title: string, skills: string[], previewSrc: string , description: string} [] = [
+  projects: {title: string, skills: string[], previewSrc: string , description: {EN: string, DE: string}} [] = [
     {
       title: 'Join',
       skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       previewSrc: './assets/img/join_preview.png',
-      description: 'todo'
+      description: {
+        EN: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+        DE: 'Aufgabenverwaltungssystem inspiriert vom Kanban-Prinzip. Ermöglicht das Erstellen und Organisieren von Aufgaben mittels Drag-and-Drop-Funktionalität sowie die Zuweisung von Benutzern und Kategorien.'
+      }
     },
     {
       title: 'Demon Assault',
       skills: ['JavaScript', 'HTML', 'CSS'],
       previewSrc: './assets/img/demon_assault_preview.png',
-      description: 'todo'
+      description: {
+        EN: `Challenging Jump 'n' Run game based on object-oriented programming. Collect droppables and shoot lightnings.`,
+        DE: `Anspruchsvolles Jump 'n' Run-Spiel basierend auf objektorientierter Programmierung. Sammle fallengelassene Items und schieße Blitze.`
+      }
     }
   ]
   overlayVisibility: boolean = false

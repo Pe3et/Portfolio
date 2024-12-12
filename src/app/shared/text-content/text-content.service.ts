@@ -125,6 +125,14 @@ export class TextContentService {
       phone: {
         EN: "Phone",
         DE: "Telefon"
+      },
+      whatIsThisProjectAbout: {
+        EN: "What is this project about?",
+        DE: "Worum geht es bei diesem Projekt?"
+      },
+      nextProject: {
+        EN: "Next Project",
+        DE: "Nächstes Projekt"
       }
     }
 

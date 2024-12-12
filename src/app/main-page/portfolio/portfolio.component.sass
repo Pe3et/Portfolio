@@ -121,6 +121,27 @@ b
         flex-direction: column
         border-radius: 30px
         padding: 95px 12px
+        margin: 96px var(--outer_padding)
+        gap: 32px
+        position: relative
         @media screen and ( min-width: 1024px )
             padding: 91px 80px
             flex-direction: row-reverse
+
+        .close_button
+            position: absolute
+            top: 16px
+            right: 16px
+            width: 48px
+            height: 48px
+            display: flex
+            align-items: center
+            justify-content: center
+            &:hover
+                cursor: pointer
+
+        .overlay_project_image
+            width: 100%
+            border-radius: 16px
+            @media screen and ( min-width: 1024px )
+                border-radius: 30px
