@@ -5,7 +5,7 @@
     <div class="projects_container">
         <div class="spacer"></div>
         @for (project of projects; track $index) {
-        <div class="single_project">
+        <div class="single_project" (click)="openProjectCard($index)">
             <div class="project_title">
                 <b>{{project.title}}</b>
                 <img src="./assets/img/arrow_outward.svg" alt="outward arrow">
@@ -24,5 +24,10 @@
         </div>
         <div class="spacer"></div>
         }
+    </div>
+    <div id="projectOverlay" [ngStyle]="{display: overlayVisibility ? 'flex' : 'none'}" (click)="toggleOverlay()">
+        <div class="project_card" (click)="propagationStop($event)">
+            
+        </div>
     </div>
 </main>

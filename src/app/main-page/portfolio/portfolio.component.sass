@@ -8,7 +8,7 @@ main
     max-width: 1440px
     width: 100%
     justify-self: center
-    @media screen and ( min-width: 1100px )
+    position: relative
 
 h1, h2
     color: $turquoise
@@ -103,3 +103,24 @@ b
                 position: absolute
                 bottom: -16px
                 right: -16px
+
+#projectOverlay
+    height: 100vh
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    background: #0000007d
+    z-index: 2
+    align-items: center
+    justify-content: center
+
+    .project_card
+        background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%)
+        display: flex
+        flex-direction: column
+        border-radius: 30px
+        padding: 95px 12px
+        @media screen and ( min-width: 1024px )
+            padding: 91px 80px
+            flex-direction: row-reverse

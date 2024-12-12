@@ -24,4 +24,19 @@ export class PortfolioComponent {
       description: 'todo'
     }
   ]
+  overlayVisibility: boolean = false
+  overlayProjectIndex: number = 0
+
+  openProjectCard(index: number) {
+    if(!this.overlayVisibility) this.toggleOverlay()
+    this.overlayProjectIndex = index
+  }
+
+  toggleOverlay() {
+    this.overlayVisibility = !this.overlayVisibility
+  }
+
+  propagationStop(event: Event) {
+    event.stopPropagation()
+  }
 }
