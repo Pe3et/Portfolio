@@ -14,7 +14,7 @@ export class PortfolioComponent {
     {
       title: 'Join',
       skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
-      previewSrc: '',
+      previewSrc: './assets/img/join_preview.png',
       description: 'todo'
     },
     {
