@@ -80,6 +80,9 @@ b
         .project_skills
             display: flex
             gap: 8px
+            @media screen and ( max-width: 330px )
+                gap: 4px
+                
             .skill_spacer
                 width: 1px
                 background: $turquoise
@@ -122,11 +125,12 @@ b
         border-radius: 30px
         padding: 95px 12px
         margin: 96px var(--outer_padding)
-        gap: 32px
         position: relative
         @media screen and ( min-width: 1024px )
             padding: 91px 80px
             flex-direction: row-reverse
+            top: 56px
+            right: 80px
 
         .close_button
             position: absolute
@@ -145,3 +149,76 @@ b
             border-radius: 16px
             @media screen and ( min-width: 1024px )
                 border-radius: 30px
+
+        .overlay_project_info
+
+            h1
+                font-family: 'Karla', sans-serif
+                font-weight: 700
+                font-size: 72px
+                margin-top: 0
+                margin-bottom: 8px
+                @media screen and ( min-width: 1024px )
+                    font-size: 128px
+                    margin-bottom: 24px
+
+            h2
+                color: white
+                letter-spacing: -0.03em
+                font-family: 'Fira Code', sans-serif
+                font-weight: 700
+                font-size: 56px
+                margin-bottom: 32px
+                @media screen and ( min-width: 1024px )
+                    font-size: 64px
+                    margin-bottom: 40px
+
+            b
+                color: $turquoise
+                font-family: 'Fira Code', sans-serif
+                font-size: 20px
+                font-weight: 700
+                margin-bottom: 16px
+                @media screen and ( min-width: 1024px )
+                    font-size: 24px
+                    margin-bottom: 20px
+
+            .overlay_project_skills
+                margin-top: 16px
+                margin-bottom: 32px
+                font-size: 16px
+                display: flex
+                gap: 16px
+                flex-wrap: wrap
+                @media screen and ( min-width: 1024px )
+                    margin-top: 20px
+                    margin-bottom: 40px
+
+                .overlay_project_skill
+                    display: flex
+                    gap: 4px
+
+            .overlay_button_area
+                display: flex
+                gap: 32px
+                justify-content: center
+                @media screen and ( max-width: 391px )
+                    gap: 8px
+
+                .button
+                    display: flex
+                    gap: 10px
+                    p
+                        font-size: 18px
+
+            .overlay_next_project
+                position: absolute
+                display: flex
+                align-items: center
+                gap: 8px
+                color: $turquoise
+                bottom: 16px
+                right: 16px
+                @media screen and ( min-width: 1024 )
+                    top: 56px
+                    right: 80px

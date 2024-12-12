@@ -100,7 +100,7 @@ export class TextContentService {
       },
       featuredProjectsHeading: {
         EN: "Featured Projects",
-        DE: "Ausgewählte Projekte"
+        DE: "Projekt-Auswahl"
       },
       featuredProjectsText: {
         EN: "Practical examples of my work - Interactive insights into my projects.",
