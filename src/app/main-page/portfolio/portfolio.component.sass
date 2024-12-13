@@ -128,10 +128,13 @@ b
         position: relative
         gap: 32px
         max-width: 1440px
+        max-height: 90%
         @media screen and ( min-width: 1070px )
             padding: 91px 80px
             flex-direction: row-reverse
             gap: 64px
+            height: 70%
+            max-height: 880px
 
         .close_button
             position: absolute
@@ -150,14 +153,14 @@ b
 
         .overlay_project_image
             max-width: 100%
-            max-height: 30vh
+            height: 20vh
             border-radius: 16px
             align-self: center
             justify-self: center
             @media screen and ( min-width: 1070px )
                 border-radius: 30px
-                max-width: 50%
-                max-height: none
+                width: 50%
+                max-height: 420px
                 margin: 32px 0px
 
         .overlay_project_info
