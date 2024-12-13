@@ -12,4 +12,12 @@ import { FooterComponent } from '../main-page/footer/footer.component';
 })
 export class PrivacyPolicyComponent {
   text = inject(TextContentService)
+
+  constructor() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant"
+    });
+  }
 }
