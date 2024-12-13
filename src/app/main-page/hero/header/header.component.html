@@ -8,9 +8,9 @@
                 <p [ngClass]="{'active_switch': text.language == 'EN'}">EN</p>
                 <p [ngClass]="{'active_switch': text.language == 'DE'}">DE</p>
             </div>
-            <a href="#about-me">{{text.getText("nav1")}}</a>
+            <a href="#aboutMe">{{text.getText("nav1")}}</a>
             <a href="#skills">{{text.getText("nav2")}}</a>
-            <a href="#projects">{{text.getText("nav3")}}</a>
+            <a href="#portfolio">{{text.getText("nav3")}}</a>
         </div>
 
         <div id="burgerButton" (click)="toggleOverlay()">
@@ -21,9 +21,9 @@
 
         <div id="burgerMenu" [ngStyle]="{display: overlayVisibility ? 'flex' : 'none'}" (click)="toggleOverlay()">
             <nav (click)="propagationStop($event)">
-                <a href="#about-me" (click)="toggleOverlay()">{{text.getText("nav1")}}</a>
+                <a href="#aboutMe" (click)="toggleOverlay()">{{text.getText("nav1")}}</a>
                 <a href="#skills" (click)="toggleOverlay()">{{text.getText("nav2")}}</a>
-                <a href="#projects" (click)="toggleOverlay()">{{text.getText("nav3")}}</a>
+                <a href="#portfolio" (click)="toggleOverlay()">{{text.getText("nav3")}}</a>
                 <div class="resp_language_switch" (click)="text.switchLanguage()">
                     <p [ngClass]="{'active_switch': text.language == 'EN'}">EN</p>
                     <p [ngClass]="{'active_switch': text.language == 'DE'}">DE</p>
