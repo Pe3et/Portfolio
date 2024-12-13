@@ -38,6 +38,14 @@ export class PortfolioComponent {
     this.overlayProjectIndex = index
   }
 
+  nextProject() {
+    if(this.overlayProjectIndex < this.projects.length - 1) {
+      this.overlayProjectIndex++
+    } else {
+      this.overlayProjectIndex = 0
+    }
+  }
+
   toggleOverlay() {
     this.overlayVisibility = !this.overlayVisibility
   }
