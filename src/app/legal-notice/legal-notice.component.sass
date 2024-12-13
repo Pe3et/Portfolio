@@ -3,7 +3,7 @@
 main
     background: black
     color: white
-    padding: var(--outer_padding)
+    padding: 64px var(--outer_padding)
     display: flex
     flex-direction: column
     align-items: start
@@ -12,9 +12,12 @@ main
 
     a:hover
         color: $turquoise
-    
+
     h1, h2
         font-family: 'Fira Code', sans-serif
+
+    @media screen and ( min-width: 630px )
+        padding: 96px var(--outer_padding)
 
 .footer
     position: absolute
