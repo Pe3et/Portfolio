@@ -1,1 +1,71 @@
 @use './../../shared' as *
+
+main
+    display: flex
+    flex-direction: column
+    align-self: center
+    gap: 32px
+    overflow-x: hidden
+    @media screen and ( min-width: 1024px )
+        gap: 48px
+
+h1
+    font-family: 'Fira Code', sans-serif
+    font-weight: 700
+    text-align: center
+    font-size: 24px
+    @media screen and ( min-width: 1024px )
+        font-size: 32px
+
+p
+    font-family: 'Karla', sans-serif
+    font-weight: 400
+    font-size: 16px
+
+.references_container
+    display: flex
+    position: relative
+    margin: 0 var(--outer_padding)
+    align-items: center
+    gap: 8px
+    width: fit-content
+    max-width: 1440px
+
+    .reference
+        border-radius: 32px
+        padding: 40px
+        width: 358px
+        height: 248px
+        border: 1px solid #3DCFB6
+        background: rgba(61, 207, 182, 0.2)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &:nth-last-child(1)
+            order: -1
+        p
+            color: #ffffffb0
+
+        .name_container
+            display: flex
+            align-items: center
+            gap: 16px
+
+            .name_line
+                height: 1px
+                background: white
+                flex: 1
+
+    .active_reference
+        height: 360px
+        background: rgba(61, 207, 182, 0.4)
+        @media screen and ( max-width: 410px )
+            width: 270px
+            height: 420px
+
+        p
+            color: white
+            font-weight: 500
+
+
+

@@ -1,3 +1,16 @@
 <main>
     <h1>{{text.getText("whatMyColleaguesSay")}}</h1>
+    <div class="references_container">
+        @for (ref of references; track $index) {
+            <div [ngClass]="{'reference': true, 'active_reference': $index == activeReference}">
+                <p>{{ref.reference[text.language]}}</p>
+                <div class="name_container">
+                    <div class="name_line"></div>
+                    <p>{{ref.name}}</p>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="reference_nav">
+    </div>
 </main>
