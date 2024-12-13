@@ -55,7 +55,7 @@
                     }
                 </div>
                 <div class="overlay_button_area">
-                    <div class="button">
+                    <a class="button" href="{{projects[overlayProjectIndex].gitHub}}" target="_blank">
                         <p>GitHub</p>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_27793_957" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -68,8 +68,8 @@
                                     fill="#3DCFB6" />
                             </g>
                         </svg>
-                    </div>
-                    <div class="button">
+                    </a>
+                    <a class="button" href="{{projects[overlayProjectIndex].live}}" target="_blank">
                         <p>Live Test</p>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_27793_957" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -82,7 +82,7 @@
                                     fill="#3DCFB6" />
                             </g>
                         </svg>
-                    </div>
+                    </a>
                 </div>
                 <div class="overlay_next_project" (click)="nextProject()">
                     <p>{{text.getText("nextProject")}}</p>
