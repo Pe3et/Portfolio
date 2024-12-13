@@ -133,6 +133,10 @@ export class TextContentService {
       nextProject: {
         EN: "Next Project",
         DE: "Nächstes Projekt"
+      },
+      whatMyColleaguesSay: {
+        EN: "What my colleagues say about me",
+        DE: "Was meine Kollegen über mich sagen"
       }
     }
 
