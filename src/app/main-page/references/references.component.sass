@@ -34,7 +34,6 @@ p
     align-items: center
     gap: 8px
     width: fit-content
-    overlflow-x: hidden
 
     .reference
         border-radius: 32px
@@ -46,24 +45,15 @@ p
         display: flex
         flex-direction: column
         justify-content: space-evenly
-        &:nth-last-child(1)
-            order: -1
-        &:nth-last-child(1), &:nth-child(2)
-            position: relative
-            &::before
-                content: ''
-                position: absolute
-                border-radius: 32px
-                top: -2px
-                left: -2px
-                right: -2px
-                bottom: -2px
-        &:nth-last-child(1)
-            &::before
-                background: linear-gradient(to right, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
-        &:nth-child(2)
-            &::before
-                background: linear-gradient(to left, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            border-radius: 32px
+            top: -2px
+            left: -2px
+            right: -2px
+            bottom: -2px
 
         @media screen and ( min-width: 1024px )
             min-width: 600px
@@ -84,6 +74,7 @@ p
     .active_reference
         height: 360px
         background: rgba(61, 207, 182, 0.4)
+        order: 1
         @media screen and ( max-width: 410px )
             width: 270px
             height: 420px
@@ -93,6 +84,15 @@ p
         p
             color: white
             font-weight: 500
+
+    .left_reference
+        order: 0
+        &::before
+            background: linear-gradient(to right, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
+    .right_reference
+        order: 2
+        &::before
+            background: linear-gradient(to left, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
 
 nav
     display: flex

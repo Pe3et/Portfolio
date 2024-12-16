@@ -48,21 +48,31 @@ export class ReferencesComponent {
       name: 'Ben D.'
     },
   ]
-  activeReference: number = 0
+  activeReferenceIndex: number = 0
+  leftReferenceIndex: number = this.references.length - 1
+  rightReferenceIndex: number = this.activeReferenceIndex + 1
 
   previousReference() {
-    if(this.activeReference > 0) {
-      this.activeReference--
+    if(this.activeReferenceIndex > 0) {
+      this.activeReferenceIndex--
+      this.leftReferenceIndex = this.activeReferenceIndex > 0 ? this.activeReferenceIndex - 1 : this.references.length - 1
+      this.rightReferenceIndex = this.activeReferenceIndex + 1
     } else {
-      this.activeReference = this.references.length - 1
+      this.activeReferenceIndex = this.references.length - 1
+      this.leftReferenceIndex = this.activeReferenceIndex - 1
+      this.rightReferenceIndex = 0
     }
   }
 
   nextReference() {
-    if(this.activeReference < this.references.length -1) {
-      this.activeReference++
+    if(this.activeReferenceIndex < this.references.length -1) {
+      this.activeReferenceIndex++
+      this.leftReferenceIndex = this.activeReferenceIndex - 1
+      this.rightReferenceIndex = this.activeReferenceIndex < this.references.length - 1 ? this.activeReferenceIndex + 1 : 0
     } else {
-      this.activeReference = 0
+      this.activeReferenceIndex = 0
+      this.leftReferenceIndex = this.references.length - 1
+      this.rightReferenceIndex = this.activeReferenceIndex + 1
     }
   }
 }
