@@ -6,7 +6,9 @@
             'reference': true,
             'active_reference': $index == activeReferenceIndex,
             'left_reference': $index == leftReferenceIndex,
-            'right_reference': $index == rightReferenceIndex
+            'right_reference': $index == rightReferenceIndex,
+            'move_left': moveCarouselRight && isMoving,
+            'move_right': moveCarouselLeft && isMoving
             }">
             <p>{{ref.reference[text.language]}}</p>
             <div class="name_container">

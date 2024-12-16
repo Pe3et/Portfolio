@@ -51,8 +51,13 @@ export class ReferencesComponent {
   activeReferenceIndex: number = 0
   leftReferenceIndex: number = this.references.length - 1
   rightReferenceIndex: number = this.activeReferenceIndex + 1
+  moveCarouselLeft: boolean = false
+  moveCarouselRight: boolean = false  
+  isMoving: boolean = false
+  animationDuration: number = 500
 
   previousReference() {
+    this.isMoving = true
     if(this.activeReferenceIndex > 0) {
       this.activeReferenceIndex--
       this.leftReferenceIndex = this.activeReferenceIndex > 0 ? this.activeReferenceIndex - 1 : this.references.length - 1
@@ -62,9 +67,13 @@ export class ReferencesComponent {
       this.leftReferenceIndex = this.activeReferenceIndex - 1
       this.rightReferenceIndex = 0
     }
+    this.moveCarouselLeft = true
+    this.moveCarouselRight = false
+    setTimeout(() => this.isMoving = false, this.animationDuration);
   }
 
   nextReference() {
+    this.isMoving = true
     if(this.activeReferenceIndex < this.references.length -1) {
       this.activeReferenceIndex++
       this.leftReferenceIndex = this.activeReferenceIndex - 1
@@ -74,5 +83,9 @@ export class ReferencesComponent {
       this.leftReferenceIndex = this.references.length - 1
       this.rightReferenceIndex = this.activeReferenceIndex + 1
     }
+    this.moveCarouselLeft = false
+    this.moveCarouselRight = true
+    setTimeout(() => this.isMoving = false, this.animationDuration);
   }
 }
+
