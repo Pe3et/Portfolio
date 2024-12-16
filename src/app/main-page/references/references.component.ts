@@ -49,4 +49,20 @@ export class ReferencesComponent {
     },
   ]
   activeReference: number = 0
+
+  previousReference() {
+    if(this.activeReference > 0) {
+      this.activeReference--
+    } else {
+      this.activeReference = this.references.length - 1
+    }
+  }
+
+  nextReference() {
+    if(this.activeReference < this.references.length -1) {
+      this.activeReference++
+    } else {
+      this.activeReference = 0
+    }
+  }
 }
