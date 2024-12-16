@@ -17,12 +17,22 @@
             <div class="name_container">
                 <div class="name_line"></div>
                 <p>{{ref.name}}</p>
+                @if ($index == leftReferenceIndex) {
+                    <div class="shadow shadow_left"></div>
+                }
+                @if ($index == rightReferenceIndex) {
+                    <div class="shadow shadow_right"></div>
+                }
+                @if ($index == activeReferenceIndex) {
+                    <div class="shadow shadow_middle"></div>
+                }
             </div>
         </div>
         }
     </div>
     <nav>
-        <svg (click)="previousReference()" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg (click)="previousReference()" width="40" height="40" viewBox="0 0 40 40" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_28561_2276" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="32"
                 height="32">
                 <rect x="4" y="4" width="32" height="32" fill="#D9D9D9" />
@@ -36,7 +46,8 @@
         @for (ref of references; track $index) {
         <div [ngClass]="{'reference_nav': true, 'active_nav': $index == activeReferenceIndex}"></div>
         }
-        <svg (click)="nextReference()" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg (click)="nextReference()" width="40" height="40" viewBox="0 0 40 40" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_28561_2284" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="32"
                 height="32">
                 <rect x="4" y="4" width="32" height="32" fill="#D9D9D9" />

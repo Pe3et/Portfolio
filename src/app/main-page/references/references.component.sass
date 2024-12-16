@@ -20,6 +20,8 @@ h1
     font-size: 24px
     @media screen and ( min-width: 1024px )
         font-size: 32px
+    @media screen and ( max-width: 350px )
+        padding: 8px
 
 p
     font-family: 'Karla', sans-serif
@@ -48,15 +50,6 @@ p
         justify-content: space-evenly
         position: relative
         transition: all 0s
-        // transition: transform 75ms ease-in-out
-        &::before
-            content: ''
-            position: absolute
-            border-radius: 32px
-            top: -2px
-            left: -2px
-            right: -2px
-            bottom: -2px
 
         @media screen and ( min-width: 1024px )
             min-width: 600px
@@ -90,13 +83,9 @@ p
 
     .left_reference
         order: 0
-        &::before
-            background: linear-gradient(to right, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
 
     .right_reference
         order: 2
-        &::before
-            background: linear-gradient(to left, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
 
     .move_to_left_from_middle
         animation: move_to_left_from_middle_animation $animationTime ease-in-out
@@ -108,9 +97,13 @@ p
         animation: move_from_left_to_middle_animation $animationTime ease-in-out
 
     .move_from_right_to_middle
-        animation: move_from_right_to_middle_animation $animationTime ease-in-out
+        animation: move_from_right_to_middle_animation_mobile $animationTime ease-in-out
+        @media screen and ( max-width: 410px )
+            animation: move_from_right_to_middle_animation_small_mobile $animationTime ease-in-out
+        @media screen and ( min-width: 1024px )
+            animation: move_from_right_to_middle_animation_desktop $animationTime ease-in-out
         .shadow
-            animation: shadow_fade_away $animationTime ease
+            animation: shadow_fade_away $animationTime forwards
 
 @keyframes move_to_left_from_middle_animation
     0%
@@ -133,7 +126,20 @@ p
         transform: translateX(100%)
         order: 1
 
-@keyframes move_from_right_to_middle_animation
+@keyframes move_from_right_to_middle_animation_small_mobile
+    0%
+        transform: translateX(0)
+        height: 248px
+        background: rgba(61, 207, 182, 0.2)
+
+    100%
+        transform: translateX(-120%)
+        order: 1
+        width: 270px
+        height: 420px
+        background: rgba(61, 207, 182, 0.4)
+
+@keyframes move_from_right_to_middle_animation_mobile
     0%
         transform: translateX(0)
         height: 248px
@@ -142,8 +148,43 @@ p
     100%
         transform: translateX(-100%)
         order: 1
-        height: 420px
+        height: 360px
         background: rgba(61, 207, 182, 0.4)
+
+@keyframes move_from_right_to_middle_animation_desktop
+    0%
+        transform: translateX(0)
+        min-width: 600px
+        height: 248px
+        background: rgba(61, 207, 182, 0.2)
+
+    100%
+        transform: translateX(-100%)
+        order: 1
+        min-width: 620px
+        height: 360px
+        background: rgba(61, 207, 182, 0.4)
+
+.shadow
+    position: absolute
+    top: -2px
+    bottom: -2px
+    left: -2px
+    right: -2px
+
+.shadow_left
+    background: linear-gradient(to right, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
+
+.shadow_right
+    background: linear-gradient(to left, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
+
+.shadow_middle
+
+@keyframes shadow_fade_away
+    0%
+        opacity: 1
+    100%
+        opacity: 0
 
 nav
     display: flex
