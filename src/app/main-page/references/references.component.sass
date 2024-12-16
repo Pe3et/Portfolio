@@ -50,6 +50,7 @@ p
         justify-content: space-evenly
         position: relative
         transition: all 0s
+        transform: translateX(0)
 
         @media screen and ( min-width: 1024px )
             min-width: 600px
@@ -89,12 +90,22 @@ p
 
     .move_to_left_from_middle
         animation: move_to_left_from_middle_animation $animationTime ease-in-out
+        .shadow
+            animation: shadow_fade $animationTime reverse forwards
 
     .move_to_right_from_middle
         animation: move_to_right_from_middle_animation $animationTime ease-in-out
+        .shadow
+            animation: shadow_fade $animationTime reverse forwards
 
     .move_from_left_to_middle
-        animation: move_from_left_to_middle_animation $animationTime ease-in-out
+        animation: move_from_left_to_middle_animation_mobile $animationTime ease-in-out
+        @media screen and ( max-width: 410px )
+            animation: move_from_left_to_middle_animation_small_mobile $animationTime ease-in-out
+        @media screen and ( min-width: 1024px )
+            animation: move_from_left_to_middle_animation_desktop $animationTime ease-in-out
+        .shadow
+            animation: shadow_fade $animationTime forwards
 
     .move_from_right_to_middle
         animation: move_from_right_to_middle_animation_mobile $animationTime ease-in-out
@@ -103,28 +114,61 @@ p
         @media screen and ( min-width: 1024px )
             animation: move_from_right_to_middle_animation_desktop $animationTime ease-in-out
         .shadow
-            animation: shadow_fade_away $animationTime forwards
+            animation: shadow_fade $animationTime forwards
+
 
 @keyframes move_to_left_from_middle_animation
-    0%
-        transform: translateX(0)
     100%
         transform: translateX(-100%)
         order: 0
+        background: rgba(61, 207, 182, 0.2)
+        height: 248px
 
 @keyframes move_to_right_from_middle_animation
-    0%
-        transform: translateX(0)
     100%
         transform: translateX(100%)
         order: 2
+        background: rgba(61, 207, 182, 0.2)
+        height: 248px
 
-@keyframes move_from_left_to_middle_animation
+@keyframes move_from_left_to_middle_animation_small_mobile
     0%
         transform: translateX(0)
+        height: 248px
+        background: rgba(61, 207, 182, 0.2)
+
+    100%
+        transform: translateX(120%)
+        order: 1
+        width: 270px
+        height: 420px
+        background: rgba(61, 207, 182, 0.4)
+
+@keyframes move_from_left_to_middle_animation_mobile
+    0%
+        transform: translateX(0)
+        height: 248px
+        background: rgba(61, 207, 182, 0.2)
+
     100%
         transform: translateX(100%)
         order: 1
+        height: 360px
+        background: rgba(61, 207, 182, 0.4)
+
+@keyframes move_from_left_to_middle_animation_desktop
+    0%
+        transform: translateX(0)
+        min-width: 600px
+        height: 248px
+        background: rgba(61, 207, 182, 0.2)
+
+    100%
+        transform: translateX(100%)
+        order: 1
+        min-width: 620px
+        height: 360px
+        background: rgba(61, 207, 182, 0.4)
 
 @keyframes move_from_right_to_middle_animation_small_mobile
     0%
@@ -180,7 +224,7 @@ p
 
 .shadow_middle
 
-@keyframes shadow_fade_away
+@keyframes shadow_fade
     0%
         opacity: 1
     100%
