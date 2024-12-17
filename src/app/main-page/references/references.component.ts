@@ -52,7 +52,7 @@ export class ReferencesComponent {
   leftReferenceIndex: number = this.references.length - 1
   rightReferenceIndex: number = this.activeReferenceIndex + 1
   carouselDirection: 'left' | 'right' | '' = ''
-  animationDuration: number = 500
+  animationDuration: number = 600
   isMoving: boolean = false
 
   previousReference() {

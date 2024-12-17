@@ -1,5 +1,5 @@
 @use './../../shared' as *
-$animationTime: 500ms
+$animationTime: 600ms
 
 main
     display: flex
@@ -72,6 +72,7 @@ p
         height: 360px
         background: rgba(61, 207, 182, 0.4)
         order: 1
+        animation: middle_glow $animationTime ease-in-out forwards
         @media screen and ( max-width: 410px )
             width: 270px
             height: 420px
@@ -84,9 +85,13 @@ p
 
     .left_reference
         order: 0
+        .shadow_left
+            animation: darkness_to_shadow_left $animationTime ease-in-out
 
     .right_reference
         order: 2
+        .shadow_right
+            animation: darkness_to_shadow_right $animationTime ease-in-out
 
     .move_to_left_from_middle
         animation: move_to_left_from_middle_animation $animationTime ease-in-out
@@ -118,6 +123,11 @@ p
         .shadow
             animation: shadow_fade $animationTime forwards
 
+    .move_outside_left
+        animation: shadow_fade $animationTime ease
+
+    .move_outside_right
+        animation: shadow_fade $animationTime ease
 
 @keyframes move_to_left_from_middle_animation
     100%
@@ -193,8 +203,6 @@ p
 .shadow_right
     background: linear-gradient(to left, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
 
-.shadow_middle
-
 @keyframes shadow_fade
     0%
         opacity: 1
@@ -208,6 +216,24 @@ p
         opacity: 0
     100%
         opacity: 1
+
+@keyframes darkness_to_shadow_left
+    0%
+        background-position: 150px
+    100%
+        background-position: 0px
+
+@keyframes darkness_to_shadow_right
+    0%
+        background-position: -150px
+    100%
+        background-position: 0px
+
+@keyframes middle_glow
+    0%
+        box-shadow: 0px 0px 0px 0px rgba(61, 207, 182, 0.4)
+    100%
+        box-shadow: 0px 0px 40px 8px rgba(61, 207, 182, 0.4)
 
 nav
     display: flex
