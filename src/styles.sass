@@ -2,80 +2,78 @@
 @use "app/shared/mixins" as *
 
 *
-  margin: 0
-  scroll-behavior: smooth
-  box-sizing: border-box
-  transition: 75ms ease-in-out
+    margin: 0
+    scroll-behavior: smooth
+    box-sizing: border-box
+    transition: 75ms ease-in-out
 
 body
-  background: black
+    background: black
 
 a
-  text-decoration: none
-  color: white
-  font-family: 'Karla', sans-serif
+    text-decoration: none
+    color: white
+    font-family: 'Karla', sans-serif
 
 h1
-  color: $turquoise
-  font-family: 'Fira Code', sans-serif
-  font-weight: 700
-  letter-spacing: -0.03em
-  font-size: 56px
-  @media screen and ( min-width: 1024px )
-    font-size: 64px
+    color: $turquoise
+    font-family: 'Fira Code', sans-serif
+    font-weight: 700
+    letter-spacing: -0.03em
+    font-size: 56px
+    @media screen and ( min-width: 1024px )
+        font-size: 64px
 
 h2
-  font-family: 'Karla', sans-serif
-  color: $turquoise
-  font-weight: 700
-  font-size: 18px
-  @media screen and ( min-width: 1024px )
-    font-size: 24px
+    font-family: 'Karla', sans-serif
+    color: $turquoise
+    font-weight: 700
+    font-size: 18px
+    @media screen and ( min-width: 1024px )
+        font-size: 24px
 
 /* karla-regular - latin */
 @font-face
-  font-display: swap
-  font-family: 'Karla'
-  font-style: normal
-  font-weight: 400
-  src: url('../public/assets/fonts/karla-v31-latin-regular.woff2') format('woff2')
+    font-display: swap
+    font-family: 'Karla'
+    font-style: normal
+    font-weight: 400
+    src: url('../public/assets/fonts/karla-v31-latin-regular.woff2') format('woff2')
 
 /* fira-code-regular - latin */
 @font-face
-  font-display: swap
-  font-family: 'Fira Code'
-  font-style: normal
-  font-weight: 400
-  src: url('../public/assets/fonts/fira-code-v22-latin-regular.woff2') format('woff2')
+    font-display: swap
+    font-family: 'Fira Code'
+    font-style: normal
+    font-weight: 400
+    src: url('../public/assets/fonts/fira-code-v22-latin-regular.woff2') format('woff2')
 
 .button
-  color: white
-  padding: 16px 24px
-  border-radius: 100px
-  border: 1px solid white
-  font-family: 'Karla', sans-serif
-  font-size: 18px
-
-  &:hover
-    color: $turquoise
-    border-color: $turquoise
-    cursor: pointer
-
-  &:active
-    color: $turquoise
-    border-color: $turquoise
+    color: white
+    padding: 16px 24px
+    border-radius: 100px
+    border: 1px solid white
+    font-family: 'Karla', sans-serif
+    font-size: 18px
+    &:hover
+        color: $turquoise
+        border-color: $turquoise
+        cursor: pointer
+    &:active
+        color: $turquoise
+        border-color: $turquoise
 
 .cardContainer
-  display: flex
-  flex-direction: column
-  background: rgba(61, 207, 182, 0.2)
-  border: 1px solid #3DCFB6
-  border-radius: 30px
-  padding: 27px 32px
-  gap: 32px
-  @media screen and ( min-width: 1024px )
-    padding: 32px
-    gap: 40px
+    display: flex
+    flex-direction: column
+    background: rgba(61, 207, 182, 0.2)
+    border: 1px solid #3DCFB6
+    border-radius: 30px
+    padding: 27px 32px
+    gap: 32px
+    @media screen and ( min-width: 1024px )
+        padding: 32px
+        gap: 40px
 
 @keyframes marquee_scroll
     0%
@@ -97,13 +95,23 @@ h2
     100%
         opacity: 0
 
-@keyframes shadow_fade_in
+@keyframes darkness_cover_left
     0%
-        opacity: 0
-    50%
-        opacity: 0
+        background-size: 0px
+        background-repeat: no-repeat
     100%
-        opacity: 1
+        background-size: 140%
+        background-repeat: no-repeat
+
+@keyframes darkness_cover_right
+    0%
+        background-size: 0px
+        background-position: right
+        background-repeat: no-repeat
+    100%
+        background-size: 140%
+        background-position: right
+        background-repeat: no-repeat
 
 @keyframes darkness_to_shadow_left
     0%

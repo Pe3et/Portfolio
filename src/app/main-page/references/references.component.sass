@@ -100,13 +100,13 @@ p
         animation: move_to_left_from_middle_animation $animationTime ease-in-out
         .shadow
             @extend .shadow_left
-            animation: shadow_fade_in $animationTime forwards
+            animation: darkness_cover_left $animationTime forwards ease
 
     .move_to_right_from_middle
         animation: move_to_right_from_middle_animation $animationTime ease-in-out
         .shadow
             @extend .shadow_right
-            animation: shadow_fade_in $animationTime forwards
+            animation: darkness_cover_right $animationTime forwards ease
 
     .move_from_left_to_middle
         animation: move_from_left_to_middle_animation_small_mobile $animationTime ease-in-out
