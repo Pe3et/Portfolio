@@ -1,4 +1,5 @@
 @use './../../shared' as *
+@use './carousel-animations' as *
 $animationTime: 600ms
 
 main
@@ -129,66 +130,6 @@ p
     .move_outside_right
         animation: shadow_fade $animationTime ease
 
-@keyframes move_to_left_from_middle_animation
-    100%
-        transform: translateX(-100%)
-        order: 0
-        background: rgba(61, 207, 182, 0.2)
-        height: 248px
-
-@keyframes move_to_right_from_middle_animation
-    100%
-        transform: translateX(100%)
-        order: 2
-        background: rgba(61, 207, 182, 0.2)
-        height: 248px
-
-@keyframes move_from_left_to_middle_animation_small_mobile
-    100%
-        transform: translateX(120%)
-        order: 1
-        width: 270px
-        height: 420px
-        background: rgba(61, 207, 182, 0.4)
-
-@keyframes move_from_left_to_middle_animation_mobile
-    100%
-        transform: translateX(100%)
-        order: 1
-        height: 360px
-        background: rgba(61, 207, 182, 0.4)
-
-@keyframes move_from_left_to_middle_animation_desktop
-    100%
-        transform: translateX(100%)
-        order: 1
-        min-width: 620px
-        height: 360px
-        background: rgba(61, 207, 182, 0.4)
-
-@keyframes move_from_right_to_middle_animation_small_mobile
-    100%
-        transform: translateX(-120%)
-        order: 1
-        width: 270px
-        height: 420px
-        background: rgba(61, 207, 182, 0.4)
-
-@keyframes move_from_right_to_middle_animation_mobile
-    100%
-        transform: translateX(-100%)
-        order: 1
-        height: 360px
-        background: rgba(61, 207, 182, 0.4)
-
-@keyframes move_from_right_to_middle_animation_desktop
-    100%
-        transform: translateX(-100%)
-        order: 1
-        min-width: 620px
-        height: 360px
-        background: rgba(61, 207, 182, 0.4)
-
 .shadow
     position: absolute
     top: -2px
@@ -202,38 +143,6 @@ p
 
 .shadow_right
     background: linear-gradient(to left, #000000 60%, rgba(61, 207, 182, 0.1) 100%)
-
-@keyframes shadow_fade
-    0%
-        opacity: 1
-    100%
-        opacity: 0
-
-@keyframes shadow_fade_in
-    0%
-        opacity: 0
-    50%
-        opacity: 0
-    100%
-        opacity: 1
-
-@keyframes darkness_to_shadow_left
-    0%
-        background-position: 150px
-    100%
-        background-position: 0px
-
-@keyframes darkness_to_shadow_right
-    0%
-        background-position: -150px
-    100%
-        background-position: 0px
-
-@keyframes middle_glow
-    0%
-        box-shadow: 0px 0px 0px 0px rgba(61, 207, 182, 0.4)
-    100%
-        box-shadow: 0px 0px 40px 8px rgba(61, 207, 182, 0.4)
 
 nav
     display: flex
