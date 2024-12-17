@@ -107,18 +107,18 @@ p
             animation: shadow_fade_in $animationTime forwards
 
     .move_from_left_to_middle
-        animation: move_from_left_to_middle_animation_mobile $animationTime ease-in-out
-        @media screen and ( max-width: 410px )
-            animation: move_from_left_to_middle_animation_small_mobile $animationTime ease-in-out
+        animation: move_from_left_to_middle_animation_small_mobile $animationTime ease-in-out
+        @media screen and ( min-width: 410px )
+            animation: move_from_left_to_middle_animation_mobile $animationTime ease-in-out
         @media screen and ( min-width: 1024px )
             animation: move_from_left_to_middle_animation_desktop $animationTime ease-in-out
         .shadow
             animation: shadow_fade $animationTime forwards
 
     .move_from_right_to_middle
-        animation: move_from_right_to_middle_animation_mobile $animationTime ease-in-out
-        @media screen and ( max-width: 410px )
-            animation: move_from_right_to_middle_animation_small_mobile $animationTime ease-in-out
+        animation: move_from_right_to_middle_animation_small_mobile $animationTime ease-in-out
+        @media screen and ( min-width: 410px )
+            animation: move_from_right_to_middle_animation_mobile $animationTime ease-in-out
         @media screen and ( min-width: 1024px )
             animation: move_from_right_to_middle_animation_desktop $animationTime ease-in-out
         .shadow
