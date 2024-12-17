@@ -135,6 +135,9 @@ b
             gap: 64px
             height: 70%
             max-height: 880px
+        @media screen and ( max-width: 420px )
+            gap: 8px
+            padding-top: 64px
 
         .close_button
             position: absolute
@@ -176,6 +179,8 @@ b
                 margin: 0
                 @media screen and ( min-width: 1070px )
                     font-size: 128px
+                @media screen and ( max-width: 420px )
+                    font-size: 50px
 
             h2
                 color: white
@@ -189,6 +194,9 @@ b
                     font-size: 64px
                     margin-top: -20px
                     margin-bottom: 32px
+                @media screen and ( max-width: 420px )
+                    font-size: 42px
+                    margin-top: -20px
 
             b
                 color: $turquoise
@@ -210,6 +218,8 @@ b
                 @media screen and ( min-width: 1070px )
                     margin-top: 20px
                     margin-bottom: 40px
+                @media screen and ( max-width: 420px )
+                    margin-bottom: 8px
 
                 .overlay_project_skill
                     display: flex
@@ -219,7 +229,7 @@ b
             .overlay_button_area
                 display: flex
                 gap: 32px
-                @media screen and ( max-width: 391px )
+                @media screen and ( max-width: 420px )
                     gap: 8px
 
                 .button
@@ -235,9 +245,9 @@ b
                         svg
                             left: 4px
                             bottom: 2px
-                    @media screen and ( max-width: 368px )
+                    @media screen and ( max-width: 420px )
                         gap: 5px
-                        padding: 16px
+                        padding: 12px
                         p
                             font-size: 16px
 
@@ -252,6 +262,8 @@ b
                 @media screen and ( min-width: 1070px )
                     bottom: 56px
                     right: 80px
+                @media screen and ( max-width: 420px )
+                    bottom: 4px
                 &:hover
                     cursor: pointer
                     color: white
